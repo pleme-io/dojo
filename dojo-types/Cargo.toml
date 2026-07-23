@@ -1,0 +1,12 @@
+[package]
+name = "dojo-types"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "dojo (道場) — the master testing vocabulary's shared border: Veredito / Evidence / Outcome / Report / DojoFacet. Every testing primitive depends on this."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
