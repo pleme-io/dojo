@@ -19,4 +19,5 @@ is kept and consumed. Extends [`theory/TESTING-SUBSTRATE.md`]; doctrine in
 The shared border + the deciding typed `Evidence` sum (embedding sui's 8-way
 `parity::Verdict` **losslessly** — the M0 falsification gate) + the ensaio & parity
 lift adapters + the `parity → perf` `gate_on` hook + CATALOG-REFLECTION. 8 tests
-green. `pleme-dojo` on crates.io (`dojo` is squatted).
+green. Not yet published; the intended crates.io name is `pleme-dojo`, since
+`dojo` is taken and `dojo-types` is an unrelated crate.
