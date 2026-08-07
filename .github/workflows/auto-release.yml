@@ -1,0 +1,27 @@
+name: auto-release
+
+# Three-line consumer shim over the fleet's WORKSPACE release pipeline: bump
+# every member in lockstep, tag, then publish each to crates.io in topological
+# (leaves-first) order, plus the `drip` catch-up job that seals a skipped ship.
+#
+# rust-auto-release.yml, not cargo-auto-release.yml: this is a workspace
+# (`members = ["dojo-types"]`), and the single-crate variant would look for a
+# root [package] that does not exist. One member today, but the doctrine says
+# every testing FACET engine gets its own crate here, so the workspace variant
+# is what survives the second one.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      bump-type:
+        description: "patch | minor | major"
+        required: false
+        default: patch
+
+jobs:
+  release:
+    uses: pleme-io/substrate/.github/workflows/rust-auto-release.yml@main
+    with:
+      bump-type: ${{ inputs.bump-type || 'patch' }}
+    secrets: inherit
