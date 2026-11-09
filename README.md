@@ -12,8 +12,7 @@ Facets (each hooks an unchanged engine): `(defcase)` omote shell-interface ·
 
 dojo is a **composition index** — it owns only the thin border (`Veredito` /
 `Outcome` / `Report` / `Evidence` / `DojoFacet`) + the operators; every facet engine
-is kept and consumed. Extends [`theory/TESTING-SUBSTRATE.md`]; doctrine in
-[`theory/DOJO.md`].
+is kept and consumed.
 
 ## Status: M0 (this crate = `dojo-types`)
 The shared border + the deciding typed `Evidence` sum (embedding sui's 8-way

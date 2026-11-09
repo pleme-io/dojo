@@ -5,7 +5,7 @@
 //! depends on: [`Veredito`] (one verdict, lattice-composable), [`Evidence`] (the
 //! deciding typed sum), [`Outcome`], [`Report`], and the [`DojoFacet`] contract.
 //!
-//! **M0 proves the load-bearing claim** (theory/DOJO.md §2, verify-pass R2): the
+//! **M0 proves the load-bearing claim** (verify-pass R2): the
 //! typed [`Evidence`] sum embeds sui's **8-way** `parity::Verdict` *losslessly* —
 //! no `Falsified{evidence: String}` stringly-typed-discriminant. The tests are the
 //! M0 **falsification gate**: if a lift is lossy, the shared type is not earned and
