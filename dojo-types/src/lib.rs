@@ -9,7 +9,7 @@
 //! typed [`Evidence`] sum embeds sui's **8-way** `parity::Verdict` *losslessly* —
 //! no `Falsified{evidence: String}` stringly-typed-discriminant. The tests are the
 //! M0 **falsification gate**: if a lift is lossy, the shared type is not earned and
-//! the pattern stays un-extracted (ENSAIO §7.1). Here it is earned — every parity
+//! the pattern stays un-extracted. Here it is earned — every parity
 //! variant round-trips through [`Veredito`] and back.
 //!
 //! Tier-honest: this M0 defines the SHAPES of the two facet source-verdicts
@@ -21,8 +21,8 @@
 
 use serde::{Deserialize, Serialize};
 
-/// Typed evidence carried by a [`Veredito`]. **The deciding new algebra of dojo**
-/// (DOJO.md §2): a first-class sum, never an opaque `String`, so a rich source
+/// Typed evidence carried by a [`Veredito`]. **The deciding new algebra of dojo**:
+/// a first-class sum, never an opaque `String`, so a rich source
 /// discriminant (the 8-way parity verdict) survives the lift losslessly.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub enum Evidence {
